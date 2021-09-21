@@ -6,21 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS-2</title>
   <style>
-    .background{
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    
+    .parent{
       background-color:aquamarine;
-      width: 250px;
-      box-sizing: border-box; 
-      height: 250px;
-      padding-right:50px;
-      padding-left: 90px;
-      margin-left: 100px;
-      border:2px solid black;
+      height: 60px;
+      padding: 20px;
+      width:50vw
+    }
+    .child{
+      background-color:blueviolet;
+      height: 20px;
+      width:80%;
     }
   </style>
 </head>
 <body>
-    <div class="background">
-      <h2>Lorem ipsum </h2>
+    <div class="parent">
+      <div class="child"></div>
     </div>
 </body>
 </html>
