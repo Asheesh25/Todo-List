@@ -5,36 +5,52 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Todo list</title>
     <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            margin: 4px;
+        div.parent {
+            display: flex;
+            align-items: stretch;
+            background-color: #111;
+            height: 100vh;
         }
-      h2{
-        padding: 5px;
-        color: bisque;
-        background-color:green;
-      }
-      h2:hover{
-          background-color: red;  
-      }
-      div:selection{
-        background: lime;
-      }
-      input:focus{
-        background: pink;
-        color: rebeccapurple;
-      }
+        
+        div.child {
+            background-color: #ffbf00;
+            flex-basis: 80%;
+        }
+        
+        div.sidebar {
+            background-color: crimson;
+            flex-basis: 20%;
+        }
+        
+        @media (max-width: 550px) {
+            div.sidebar {
+                animation: 5s expand linear infinite;
+            }
+            div.child {
+                flex-basis: 100%;
+            }
+        }
+        
+        @keyframes expand {
+            0% {
+                flex-basis: 0%;
+            }
+            100% {
+                flex-basis: 50%;
+            }
+        }
     </style>
+
 </head>
+
 <body>
-  <h2>I am a heading</h2>
-  <div>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum aspernatur quia consequatur voluptas neque vitae minima reprehenderit dolor commodi, eligendi, eius placeat! Consequatur eligendi quaerat magnam incidunt, odit voluptates impedit.
-  </div>
-  <input type="text">
+    <div class="parent">
+        <div class="sidebar"></div>
+        <div class="child"></div>
+    </div>
 </body>
+
 </html>
